@@ -1,0 +1,129 @@
+/* ------------------------------
+   Reset & Base Styles
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #191919;
+  color: #00ffcc;
+  font-family: 'Press Start 2P', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ------------------------------
+   Layout Structure
+------------------------------ */
+.scene {
+  text-align: center;
+  position: relative;
+}
+
+.button-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* ------------------------------
+   Main Elements Visibility Reset
+------------------------------ */
+.scene-title,
+.duck,
+.wake-button,
+.sub-warning {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ------------------------------
+   Title Styling
+------------------------------ */
+.scene-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-shadow: 3px 3px #008080;
+}
+
+/* ------------------------------
+   Duck Image
+------------------------------ */
+.duck {
+  width: 150px;
+  image-rendering: pixelated;
+  max-width: 25vw;
+  margin: 20px auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* ------------------------------
+   Button
+------------------------------ */
+.wake-button {
+  background-color: #ffcc00;
+  color: #444343;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 18px;
+  padding: 10px 20px;
+  text-shadow: 2px 2px #000000;
+  border: none;
+  box-shadow: 2px 2px #aa8800;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.wake-button:hover {
+  transform: scale(1.1);
+}
+
+/* ------------------------------
+   Sub Warning Text
+------------------------------ */
+.sub-warning {
+  font-size: 8px;
+  color: #885b5b;
+  margin-top: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+/* ------------------------------
+   Floating Warning Messages
+------------------------------ */
+.floating-warning {
+  position: absolute;
+  font-size: 12px;
+  font-family: 'Press Start 2P', monospace;
+  color: #ff4444;
+  text-shadow: 1px 1px #000;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ------------------------------
+   Shake Animation
+------------------------------ */
+.shake {
+  animation: shake 0.3s linear;
+}
+
+@keyframes shake {
+  0%   { transform: translate(2px, 1px); }
+  25%  { transform: translate(-3px, -2px); }
+  50%  { transform: translate(3px, 2px); }
+  75%  { transform: translate(-2px, -1px); }
+  100% { transform: translate(0px, 0px); }
+}
+a

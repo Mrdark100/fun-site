@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Don't Wake the Duck</title>
+
+  <!-- Pixel Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="scene">
+    <!-- Main Warning Text -->
+    <h1 class="scene-title" id="warning-text">THE DUCK IS SLEEPING</h1>
+
+    <!-- Duck Image -->
+    <img src="assets/images/sd1.png" alt="Sleeping Duck" class="duck" id="duck-img" />
+
+    <!-- Button and Subtext -->
+    <div class="button-area">
+      <button id="wake-btn" class="wake-button">Wake it?</button>
+      <p class="sub-warning">*Not recommended*</p>
+    </div>
+  </section>
+
+  <!-- GSAP Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
